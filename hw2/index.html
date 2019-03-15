@@ -30,8 +30,14 @@
         font-size: 17px;
         color: gray;
     }
+    h5{
+        text-align: center;
+        font-size: 40px;
+        color: gray;
+    }
     p{
-        text-align: center
+        text-align: center;
+        color: gray;
     }
 
     #space{
@@ -41,16 +47,18 @@
 
     .text-block{
         position: absolute;
-        top:15%;
+        top:12%;
         bottom:20%;
-        right:20%;
+        right:15%;
         color: white;
         padding-right: 2%;
         padding-left: 2%;
     }
-    #space{
-       margin: 5em;
     
+    #space{
+       margin: 5em;}
+
+   
 </style>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
@@ -61,97 +69,130 @@
     <img , width="100%" height="auto" src="img/akane.jpg">
     <div class="text-block">
     <h1> Akane Nakasuji </h1>
+    <div class="contact">
+    <p> email; 18501982@life.hkbu.edu.hk </p>
+    
+</div>
 </div>
 
 <body>
-    <h2> Akane Nakasuji</h2>
+    <h5> Akane Nakasuji</h5>
     <h3>UClan/ HKBU Exchange for 1 year</h3>
     <br>
     <br>
 
-<h2>
-<u> Education</u>
-</h2>
+    <h2>
+    <u> Education </u>
+    </h2>
 
-<h4>
-<b> Undergraduate </b>
-</h4>
+
+<style>
+   .undergraduate{
+       background-color: white;
+       margin-right: auto;
+       margin-left: auto;
+   }
+   .exchange{
+    background-color: white;
+       margin-right: auto;
+       margin-left: auto; 
+   }
+   @media(min-width:600px) {
+       #container1 {
+           display:grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: auto;
+           grid-template-areas:  /* prettier-ignore */
+           "un ex";
+       }
+       .undergraduate{
+           grid-area: un;
+       }
+       .exchange{
+           grid-area: ex;
+       }
+   }
+
+</style>
+
+<div id="container1"> 
+
+<div class="undergraduate"> 
+    <h4> UNDERGRADUATE </h4>
 
 <p> 
 <i> BA(Hons)INTERNATIONAL JOURNALISM</i>
 "-University of Central Lancashire- United Kingdom, Preston Campus- 09/2017 ~06/2020- "
 </p>
+</div>
 
-<h4>
-<b>Exchange Program</b> 
-</h4>
-<p>
-<i> INTERNATIONAL JOURNALISM</i>
-"-HONG KONG BAPTIST UNIVERSITY - HONG KONG, KOWLOON - 09/2018~ 06/2019 -"
-</p>
+<div class="exchange">
+    <h4>EXCHANGE PROGRAM</h4>
+    <p>
+    <i> INTERNATIONAL JOURNALISM</i>
+    "-HONG KONG BAPTIST UNIVERSITY - HONG KONG, KOWLOON - 09/2018~ 06/2019 -"
+    </p>  
+</div>
+</div>
 
-<h2>Skills </h2>
+
+
+<h2> <u>Skills </u></h2>
     <p>Adobe Audition CC, Premiere Pro </p>
 
-    <style>
-    .headshot{
-        background-color: lightseagreen;
-        width:300px;
-        height:300px;
-        border-radius: 50%;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    .profile1,
-    .profile2{
-        background-color: aquamarine;
-        margin:2px;
-    }
-    @media(min-width:600px){
-        #begin{
-            display: grid;
-            grid-template-columns:2fr 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: /* prettier-ignore */
-            "hs p1"
-            /* prettier-ignore */
-            "hs p2";
 
-        }
-        .headshot{
-            grid-area: hs;
-        }
-        .profile1{
-            grid-area: p1;
-        }
-        .profile2{
-            grid-area: p2;
-        }
-        }
-    
-    </style>
+<h2> <u>My Previous Work </u></h2>
+
+<div id="container2">
+    <div class="photo"> 
+            <a href="http://tyr.jour.hkbu.edu.hk/2018/10/10/18-19-policy-address-lantau-tomorrow-vision-project-fuels-anxiety-among-residents/">
+        <image src="img/screen.png" width="385" height="240" >
+        </a>
+    </div>
+    <div class="photo">
+        <image src="img/animal2.jpg" width="385" height="240">
+            <a href="https://drive.google.com/file/d/1pPyVvKKAuZEW2E84Bh92N3n9ueYiwg2_/view"></a>
+    </div>
+    <div class="photo">
+        <image src="img/temple.jpg" width="385" height="240">
+            <a href="https://drive.google.com/file/d/1B4TZUmxP8iCcCjMdTkp7Eaul9HEW_DcW/view?usp=sharing"></a>
+        </div>
+</div>
+   
 
    
 
    
     <style>
     .photo{
-        min-width:100px;
-        min-height:100px;
-        background-color: aliceblue;
-        border:lightblue 1px solid;
+        background-color:white;
+        border:white 1px solid;
         margin: 5px;
+    }
+
+    .intext{
+        position:absolute;
+        left:15%;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-bottom: 100%;
+    }
+
+    h6{
+        font-size: 20px;
+        background-color: white;
+        color:gray;
     }
     
     @media (min-width:400px) {
-            .container {
+            #container2 {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
         }
         
         @media (min-width:700px) {
-            .container {
+            #container2 {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
             }
@@ -160,31 +201,21 @@
 </style>
   
 
-   
-
-   
-    <h2> My previous Work </h2>
-    <p>
-    <ol>
-        <li>18/19 Policy Adress <a href="http://tyr.jour.hkbu.edu.hk/2018/10/10/18-19-policy-address-lantau-tomorrow-vision-project-fuels-anxiety-among-residents/"> Click here</a></li>
-        <li>Animal Watcher Scheme and Animal Regislation <a href="https://drive.google.com/file/d/1pPyVvKKAuZEW2E84Bh92N3n9ueYiwg2_/view"> Click here</a></li>
-        <li>Hong Kong Temple story <a href="https://drive.google.com/file/d/1B4TZUmxP8iCcCjMdTkp7Eaul9HEW_DcW/view?usp=sharing"> Click here</a> </li>
-    </ol>
-</p>
-
-    <h2> Home Work </h2>
+    <h2> <u>Home Work </u></h2>
     <ul>
         <li> Home Work 1-<a href="https://anakasuji.github.io/hw1"> Big Blog</a></li>
         <li> Home Work 2-</li>
     </ul>
 
    
-    <h2> Tools</h2>
+    <h2> <u> Tools </u> </h2>
     <p>All tools and website what we use during class or for assignments </p>
     <ul>
         <li> <a href="https://github.com/"> GitHub</a></li>
         <li> <a href="https://slack.com/intl/ja/"> Slack</a></li>
         <li> <a href="https://infogram.com/"> Infogram</a></li>
     </ul>
+
+   
 </body>
 </div>
