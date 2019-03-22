@@ -1,0 +1,112 @@
+<head>
+
+        <title>
+            Are you sleepy
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            body {
+                font-size: 25px;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background-color: grey;
+                color: white
+            }
+            
+            .container {
+                max-width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            input {
+                width: 80px
+            }
+            
+            @media (min-width:1000px) {
+                #t {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: /* prettier-ignore */
+                    "t1 t2";
+                    /* prettier-ignore */
+                }
+                
+            }
+        </style>
+    
+    </head>
+    
+    <body>
+        <h1 style="text-align: center; font-size:2em"> Do You Care Your Health? </h1>
+        <div style="margin-left:7.5%;margin-right:7.5%">
+            <p>In recent years, obesity is the major health problem in Western countries. So peole care what they eat and calculate calories of each meal. But why don't your csheck your BMI (Boby Mass Index) first? </p>
+           
+        </div>
+
+        <br>
+
+        <div id="tabContents">
+            <fieldset id="tab1">
+                <div id="height" style="margin-bottom:5px;">
+                <p>
+                    " Height: "
+                    <input type="number" id="height" step="0.1">
+                    " cm "
+                </p>
+                </div>
+
+                <div id="weight">
+                    <p>
+                        "Weight"
+                        <input type="number" id="weight" step="0.1">
+                        "kg"
+                    </p>
+                </div>
+            </fieldset>
+
+            <br>
+
+            <fieldset id="r1">
+                <legend> ⚪︎ Result ⚪︎　</legend>
+                <p>
+                    Your BMI is...
+                    <div class="uni transparent input">
+                    <input id="r1" type="numner" placeholder="0" disabled>
+                     " NaN "
+          
+                </div>
+                </p>
+            </fieldset>
+             
+            <script>
+                function calculate() {
+                    // step1: get input
+                     h = dovument.getElementById("height").value;
+                     w = document.getElementById("weight").value;
+                    // step2: do the calculation
+                    result = w / ((h / 100)* (h / 100))
+                    // step3: write out the r1
+                    
+                document.getElementById('r1').value =r1
+                }
+
+       
+       document.getElementById("height").addEventListener('change', calculate)
+       document.getElementById("height").addEventListener('keyup', calculate)
+       document.getElementById("weight").addEventListener('change', calculate)
+       document.getElementById("weight").addEventListener('keyup', calculate)
+
+        // r1 = Math.pow(h, w)
+       // console.log('r1:')
+       // console.log(r1)
+
+   </script>
+        </div>
+    </body>
