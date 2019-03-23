@@ -1,6 +1,5 @@
 <head>
 
-        
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.css">
         <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.2/dist/semantic.min.js"></script>
@@ -22,7 +21,21 @@
                 margin-right: auto;
             }
             
-         
+            input {
+                width: 80px
+            }
+            
+            @media (min-width:1000px) {
+                #t {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: /* prettier-ignore */
+                    "t1 t2";
+                    /* prettier-ignore */
+                }
+                
+            }
         </style>
     
     </head>
@@ -38,7 +51,7 @@
 
         <div id="tabContents">
             <fieldset id="tab1">
-                <div id="height" style="margin-bottom:5px;">
+                <div id="height.c" style="margin-bottom:5px;">
                 <p>
                     " Height: "
                     <input type="number" id="height" step="0.1">
@@ -46,7 +59,7 @@
                 </p>
                 </div>
 
-                <div id="weight">
+                <div id="weight.c">
                     <p>
                         "Weight"
                         <input type="number" id="weight" step="0.1">
@@ -55,9 +68,14 @@
                 </div>
             </fieldset>
 
+            <div class="field">
+                    <button id="calculate" class="ui button"> Calculate </button>
+                </div>
+     
+
             <br>
 
-            <fieldset id="r1">
+            <fieldset id="r1.c">
                 <legend> ⚪︎ Result ⚪︎　</legend>
                 <p>
                     Your BMI is...
@@ -72,13 +90,12 @@
             <script>
                 function calculate() {
                     // step1: get input
-                     h = dovument.getElementById("height").value;
+                     h = document.getElementById("height").value;
                      w = document.getElementById("weight").value;
                     // step2: do the calculation
                     result = w / ((h / 100)* (h / 100))
-                    // step3: write out the r1
-                    
-                document.getElementById('r1').value =r1
+                    // step3: write out the result
+                    document.getElementById('r1').value= result
                 }
 
        
@@ -87,10 +104,7 @@
        document.getElementById("weight").addEventListener('change', calculate)
        document.getElementById("weight").addEventListener('keyup', calculate)
 
-        // r1 = Math.pow(h, w)
-       // console.log('r1:')
-       // console.log(r1)
-
    </script>
         </div>
     </body>
+
